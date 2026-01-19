@@ -38,10 +38,15 @@ def extract_day_number_from_panel(panel) -> int | None:
     for c in comments:
         m = re.search(r"\b(\d{1,2})\b", str(c))
         if m:
-            return int(m.group(1))
+            try:
+                return int(m.group(1))
+            except ValueError:
+                pass
     return None
 
 def infer_week_dates(day_numbers: list[int], today_local: date) -> list[date]:
+    if not day_numbers:
+        return []
     year = today_local.year
     month = today_local.month
     result = []
@@ -59,14 +64,31 @@ def infer_week_dates(day_numbers: list[int], today_local: date) -> list[date]:
     return result
 
 def parse_time_and_tags(raw: str):
+    """
+    Robust parser. Extracts a HH:MM time anywhere in the string.
+    Anything else becomes a tag/note (e.g. OC, SOLD OUT, etc.)
+    """
     raw = raw.strip()
-    m = re.match(r"^(\d{1,2}:\d{2})(?:$begin:math:text$\(\[\^\)\]\+\)$end:math:text$)?$", raw)
-    if not m:
+
+    # Find a time like 12:15, 2:45, 8:00 anywhere in the text
+    time_match = re.search(r"\b(\d{1,2}:\d{2})\b", raw)
+    if not time_match:
         return None, [], raw
-    time_str = m.group(1)
-    tag = m.group(2)
-    tags = [tag] if tag else []
-    notes = tag if tag else None
+
+    time_str = time_match.group(1)
+
+    # Whatever remains (after removing the time) is considered annotation
+    remainder = raw.replace(time_str, "").strip()
+
+    tags = []
+    notes = None
+
+    if remainder:
+        cleaned = remainder.strip("() ").strip()
+        if cleaned:
+            tags = [cleaned]
+            notes = cleaned
+
     return time_str, tags, notes
 
 def main():
@@ -85,7 +107,7 @@ def main():
 
     panels = module.select("div.showtimes-container > div[id^='tabs-']")
     if not panels:
-        raise RuntimeError("Found showtimes-table but no tabs panels div#tabs-0..")
+        raise RuntimeError("Found showtimes-table but no day panels div#tabs-0..")
 
     day_numbers = []
     for p in panels:
@@ -96,7 +118,7 @@ def main():
 
     dates = infer_week_dates(day_numbers, datetime.now(tz=TZ).date())
 
-    films = {}        # <-- dictionary, not list
+    films = {}        # dictionary keyed by film_id
     screenings = []
 
     for panel, panel_date in zip(panels, dates):
@@ -123,7 +145,6 @@ def main():
             if not spans:
                 continue
 
-            # Create film entry once
             if film_id not in films:
                 films[film_id] = {
                     "title": title,
