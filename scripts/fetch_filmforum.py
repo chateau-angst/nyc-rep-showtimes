@@ -17,7 +17,7 @@ TZ = ZoneInfo("America/New_York")
 
 # This should be the exact page where you saw the "Playing This Week" block.
 # If you don’t know yet, start with the homepage and adjust if needed.
-SOURCE_URL = os.environ.get("FILMFORUM_SOURCE_URL", "https://filmforum.org/")
+SOURCE_URL = os.environ.get("FILMFORUM_SOURCE_URL", "https://filmforum.org/now_playing/")
 
 HEADERS = {
     "User-Agent": "nyc-rep-showtimes-bot/1.0 (+https://github.com/chateau-angst/nyc-rep-showtimes)",
