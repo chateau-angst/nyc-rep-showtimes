@@ -1,22 +1,42 @@
 {
   "source": "metrograph_nyc",
   "source_url": "https://metrograph.com/nyc/",
-  "fetched_at": "2026-01-19T16:34:05.405769+00:00",
+  "fetched_at": "2026-01-19T20:38:38.969620+00:00",
   "theater": {
     "id": "metrograph",
     "name": "Metrograph",
     "city": "New York"
   },
   "films": {
-    "9999002187": {
-      "film_id": "9999002187",
-      "title": "An Elephant Sitting Still",
-      "director": "Hu Bo",
-      "year": 2018,
-      "runtime_min": 230,
+    "9999004640": {
+      "film_id": "9999004640",
+      "title": "Casper",
+      "director": "Brad Silberling",
+      "year": 1995,
+      "runtime_min": 100,
+      "format": "4K DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/CASPER_1-copy.jpg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004640"
+    },
+    "9999000982": {
+      "film_id": "9999000982",
+      "title": "Mary Poppins",
+      "director": "Robert Stevenson",
+      "year": 1964,
+      "runtime_min": 139,
+      "format": "35mm",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/MARY-POPPINS_2-copy.jpg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000982"
+    },
+    "9999002663": {
+      "film_id": "9999002663",
+      "title": "Last Year at Marienbad",
+      "director": "Alain Resnais",
+      "year": 1961,
+      "runtime_min": 94,
       "format": "DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/AN-ELEPHANT-SITTING-STILL_4.jpeg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999002187"
+      "poster_url": "https://metrograph.com/wp-content/uploads/2024/09/LAST-YEAR-AT-MARIENBAD_11_resized.jpg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999002663"
     },
     "9999001048": {
       "film_id": "9999001048",
@@ -27,6 +47,76 @@
       "format": "DCP",
       "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/ONCE-UPON-A-TIME-IN-AMERICA_3-copy.jpg",
       "detail_url": "https://metrograph.com/film/?vista_film_id=9999001048"
+    },
+    "9999004647": {
+      "film_id": "9999004647",
+      "title": "Ice",
+      "director": "Robert Kramer",
+      "year": 1970,
+      "runtime_min": 130,
+      "format": "16mm",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/ICE.jpg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004647"
+    },
+    "9999004440": {
+      "film_id": "9999004440",
+      "title": "Love & Pop",
+      "director": "Hideaki Anno",
+      "year": 1998,
+      "runtime_min": 110,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/07/LOVE-AND-POP_2.jpeg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004440"
+    },
+    "9999004190": {
+      "film_id": "9999004190",
+      "title": "Blue Velvet [35mm]",
+      "director": "David Lynch",
+      "year": 1986,
+      "runtime_min": 120,
+      "format": "35mm",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/02/BLUE-VELVET_1_resized.jpg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004190"
+    },
+    "9999004644": {
+      "film_id": "9999004644",
+      "title": "They Say the Moon Is Fuller Here",
+      "director": "Clara Law",
+      "year": 1985,
+      "runtime_min": 78,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/THEY-SAY-THE-MOON-IS-FULLER_2.jpeg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004644"
+    },
+    "9999000581": {
+      "film_id": "9999000581",
+      "title": "Paris, Texas",
+      "director": "Wim Wenders",
+      "year": 1984,
+      "runtime_min": 145,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/PARIS-TEXAS_9.jpeg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000581"
+    },
+    "9999000040": {
+      "film_id": "9999000040",
+      "title": "Variety",
+      "director": "Bette Gordon",
+      "year": 1983,
+      "runtime_min": 100,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2022/12/VARIETY2.png",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000040"
+    },
+    "9999002187": {
+      "film_id": "9999002187",
+      "title": "An Elephant Sitting Still",
+      "director": "Hu Bo",
+      "year": 2018,
+      "runtime_min": 230,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/AN-ELEPHANT-SITTING-STILL_4.jpeg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999002187"
     },
     "9999000168": {
       "film_id": "9999000168",
@@ -48,16 +138,6 @@
       "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/UPTIGHT_5-copy.jpg",
       "detail_url": "https://metrograph.com/film/?vista_film_id=9999004639"
     },
-    "9999000040": {
-      "film_id": "9999000040",
-      "title": "Variety",
-      "director": "Bette Gordon",
-      "year": 1983,
-      "runtime_min": 100,
-      "format": "DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2022/12/VARIETY2.png",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000040"
-    },
     "9999004558": {
       "film_id": "9999004558",
       "title": "Angel's Egg",
@@ -68,16 +148,6 @@
       "poster_url": "https://metrograph.com/wp-content/uploads/2025/10/ANGELS-EGG_1.jpeg",
       "detail_url": "https://metrograph.com/film/?vista_film_id=9999004558"
     },
-    "9999004190": {
-      "film_id": "9999004190",
-      "title": "Blue Velvet [35mm]",
-      "director": "David Lynch",
-      "year": 1986,
-      "runtime_min": 120,
-      "format": "35mm",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/02/BLUE-VELVET_1_resized.jpg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004190"
-    },
     "9999002737": {
       "film_id": "9999002737",
       "title": "Subway Riders",
@@ -87,26 +157,6 @@
       "format": "Digital",
       "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/SUBWAY-RIDERS_1-copy.jpg",
       "detail_url": "https://metrograph.com/film/?vista_film_id=9999002737"
-    },
-    "9999000581": {
-      "film_id": "9999000581",
-      "title": "Paris, Texas",
-      "director": "Wim Wenders",
-      "year": 1984,
-      "runtime_min": 145,
-      "format": "DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/PARIS-TEXAS_9.jpeg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000581"
-    },
-    "9999004647": {
-      "film_id": "9999004647",
-      "title": "Ice",
-      "director": "Robert Kramer",
-      "year": 1970,
-      "runtime_min": 130,
-      "format": "16mm",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/ICE.jpg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004647"
     },
     "9999003864": {
       "film_id": "9999003864",
@@ -157,16 +207,6 @@
       "format": "DCP",
       "poster_url": "https://metrograph.com/wp-content/uploads/2025/11/BLADE-RUNNER_-THE-FINAL-CUT_1.jpeg",
       "detail_url": "https://metrograph.com/film/?vista_film_id=9999000718"
-    },
-    "9999004440": {
-      "film_id": "9999004440",
-      "title": "Love & Pop",
-      "director": "Hideaki Anno",
-      "year": 1998,
-      "runtime_min": 110,
-      "format": "DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/07/LOVE-AND-POP_2.jpeg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004440"
     },
     "9999000586": {
       "film_id": "9999000586",
@@ -862,6 +902,96 @@
   "screenings": [
     {
       "theater_id": "metrograph",
+      "date": "2026-01-18",
+      "time": "11:00am",
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28867",
+      "film_id": "9999004640",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-18",
+      "time": "11:15am",
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28868",
+      "film_id": "9999000982",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-18",
+      "time": "1:00pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999002663",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-18",
+      "time": "2:00pm",
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28869",
+      "film_id": "9999001048",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-18",
+      "time": "3:00pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999004647",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-18",
+      "time": "5:30pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999004440",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-18",
+      "time": "6:15pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999004190",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-18",
+      "time": "7:45pm",
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28873",
+      "film_id": "9999004644",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-18",
+      "time": "8:45pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999000581",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-18",
+      "time": "9:30pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999000040",
+      "notes": "Director Bette Gordon in person for an introduction on her film Variety and a tribute to Amos Poe on Friday, January 9th"
+    },
+    {
+      "theater_id": "metrograph",
       "date": "2026-01-19",
       "time": "12:30pm",
       "status": "available",
@@ -873,8 +1003,8 @@
       "theater_id": "metrograph",
       "date": "2026-01-19",
       "time": "12:45pm",
-      "status": "sold_out",
-      "ticket_url": null,
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29031",
       "film_id": "9999001048",
       "notes": null
     },
@@ -918,8 +1048,8 @@
       "theater_id": "metrograph",
       "date": "2026-01-19",
       "time": "9:30pm",
-      "status": "sold_out",
-      "ticket_url": null,
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29030",
       "film_id": "9999004190",
       "notes": null
     },
@@ -981,8 +1111,8 @@
       "theater_id": "metrograph",
       "date": "2026-01-20",
       "time": "9:30pm",
-      "status": "sold_out",
-      "ticket_url": null,
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29040",
       "film_id": "9999004642",
       "notes": null
     },
@@ -1077,8 +1207,8 @@
       "theater_id": "metrograph",
       "date": "2026-01-23",
       "time": "4:25pm",
-      "status": "sold_out",
-      "ticket_url": null,
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28915",
       "film_id": "9999000581",
       "notes": null
     },
@@ -1176,8 +1306,8 @@
       "theater_id": "metrograph",
       "date": "2026-01-24",
       "time": "6:30pm",
-      "status": "sold_out",
-      "ticket_url": null,
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28923",
       "film_id": "9999004661",
       "notes": "Q&A with editor Tim \nStreeto, ACE, moderated by Joanna Naugle, ACE on Saturday, January 24th"
     },
