@@ -80,15 +80,10 @@ def main():
         # Closed days look like: <div class="calendar-list-day closed" ...>
         if "closed" in classes:
             out["screenings"].append({
-                
-              "theater_id": "metrograph",
-              "date": "2026-01-21",
-              "time": null,
-              "status": "closed",
-              "ticket_url": null,
-              "film_id": null,
-              "notes": "Sorry, Metrograph will be closed for a private event."
-
+                "theater_id": "metrograph",
+                "date": date_str,
+                "status": "closed",
+                "note": day.get_text(" ", strip=True),
             })
             continue
 
