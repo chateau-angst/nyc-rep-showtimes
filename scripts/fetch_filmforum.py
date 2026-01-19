@@ -2,17 +2,21 @@
 import json
 import os
 import re
+import sys
 from datetime import datetime, date
 from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup, Comment
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 SOURCE = "filmforum_nyc"
 THEATER = {"id": "filmforum", "name": "Film Forum", "city": "New York"}
 TZ = ZoneInfo("America/New_York")
 
 SOURCE_URL = os.environ.get("FILMFORUM_SOURCE_URL", "https://filmforum.org/now_playing")
+OUT_PATH = "docs/filmforum.json"
 
 HEADERS = {
     "User-Agent": "nyc-rep-showtimes-bot/1.0 (+https://github.com/chateau-angst/nyc-rep-showtimes)",
@@ -45,10 +49,8 @@ def extract_day_number_from_panel(panel) -> int | None:
 def infer_week_dates(day_numbers: list[int], today_local: date) -> list[date]:
     if not day_numbers:
         return []
-
     year = today_local.year
     month = today_local.month
-
     result = []
     prev = None
     for d in day_numbers:
@@ -73,27 +75,80 @@ def parse_time_and_tags(raw: str) -> tuple[str | None, list[str], str | None]:
     notes = tag if tag else None
     return time_str, tags, notes
 
-def main():
-    resp = requests.get(SOURCE_URL, headers=HEADERS, timeout=30)
-    resp.raise_for_status()
+def make_session() -> requests.Session:
+    session = requests.Session()
+    retry = Retry(
+        total=3,
+        connect=3,
+        read=3,
+        backoff_factor=1.5,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["GET"],
+        raise_on_status=False,
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    return session
 
-    soup = BeautifulSoup(resp.text, "html.parser")
+def fetch_html(session: requests.Session, url: str) -> str:
+    # Longer timeout for slow/blocked responses:
+    # (connect timeout, read timeout)
+    resp = session.get(url, headers=HEADERS, timeout=(20, 120))
+    resp.raise_for_status()
+    return resp.text
+
+def main():
+    os.makedirs("docs", exist_ok=True)
+
+    session = make_session()
+
+    try:
+        html = fetch_html(session, SOURCE_URL)
+    except Exception as e:
+        # If we already have a previous JSON, DO NOT break the whole pipeline.
+        # Keep last-known-good.
+        if os.path.exists(OUT_PATH):
+            print(f"[WARN] Film Forum fetch failed ({type(e).__name__}): {e}")
+            print("[WARN] Keeping existing docs/filmforum.json and exiting successfully.")
+            return 0
+        # First run: no existing file, so fail loudly.
+        print(f"[ERROR] Film Forum fetch failed and no existing {OUT_PATH} is present.")
+        raise
+
+    soup = BeautifulSoup(html, "html.parser")
     module = soup.select_one("div.module.showtimes-table")
     if not module:
-        raise RuntimeError(
-            "Could not find div.module.showtimes-table. "
-            "Confirm FILMFORUM_SOURCE_URL is the page that contains 'Playing This Week'."
+        msg = (
+            "Could not find div.module.showtimes-table on the page. "
+            "This could mean the markup changed or the HTML returned isn't the real page."
         )
+        # Same “keep last good” behavior
+        if os.path.exists(OUT_PATH):
+            print(f"[WARN] {msg}")
+            print("[WARN] Keeping existing docs/filmforum.json and exiting successfully.")
+            return 0
+        raise RuntimeError(msg)
 
     panels = module.select("div.showtimes-container > div[id^='tabs-']")
     if not panels:
-        raise RuntimeError("Found showtimes module, but no day panels (div#tabs-0..6).")
+        msg = "Found showtimes module, but no day panels (div#tabs-0..6)."
+        if os.path.exists(OUT_PATH):
+            print(f"[WARN] {msg}")
+            print("[WARN] Keeping existing docs/filmforum.json and exiting successfully.")
+            return 0
+        raise RuntimeError(msg)
 
     day_numbers = []
     for p in panels:
         dn = extract_day_number_from_panel(p)
         if dn is None:
-            raise RuntimeError("Missing day-of-month HTML comment like <!-- 19 --> in a panel.")
+            msg = "Missing day-of-month HTML comment like <!-- 19 --> in a panel."
+            if os.path.exists(OUT_PATH):
+                print(f"[WARN] {msg}")
+                print("[WARN] Keeping existing docs/filmforum.json and exiting successfully.")
+                return 0
+            raise RuntimeError(msg)
         day_numbers.append(dn)
 
     today_local = datetime.now(tz=TZ).date()
@@ -164,11 +219,11 @@ def main():
         "screenings": screenings,
     }
 
-    os.makedirs("docs", exist_ok=True)
-    with open("docs/filmforum.json", "w", encoding="utf-8") as f:
+    with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
-    print(f"Wrote docs/filmforum.json with {len(films)} films and {len(screenings)} screenings.")
+    print(f"Wrote {OUT_PATH} with {len(films)} films and {len(screenings)} screenings.")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
