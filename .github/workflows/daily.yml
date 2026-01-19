@@ -2,7 +2,7 @@ name: Fetch Metrograph Daily
 
 on:
   schedule:
-    - cron: "15 10 * * *"  # runs daily at 10:15 UTC
+    - cron: "20 11 * * *" # daily at 11:20 UTC (~6:20am NYC during standard time)
   workflow_dispatch:
 
 jobs:
