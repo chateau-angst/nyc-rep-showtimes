@@ -1,0 +1,11 @@
+{
+  "source": "filmforum_nyc",
+  "source_url": "https://filmforum.org/now_playing",
+  "fetched_at": "2026-01-19T22:23:16.643433+00:00",
+  "theater": {
+    "id": "filmforum",
+    "name": "Film Forum",
+    "city": "New York"
+  },
+  "films": []
+}
