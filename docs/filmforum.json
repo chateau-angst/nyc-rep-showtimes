@@ -1,11 +1,692 @@
-{
-  "source": "filmforum_nyc",
-  "source_url": "https://filmforum.org/now_playing",
-  "fetched_at": "2026-01-19T22:23:16.643433+00:00",
-  "theater": {
+[INFO] Fetching: https://filmforum.org/now_playing
+[INFO] HTTP status: 200
+[INFO] Parsed films=6 screenings=68
+[INFO] Wrote docs/filmforum.json
+er": {
     "id": "filmforum",
     "name": "Film Forum",
     "city": "New York"
   },
-  "films": []
+  "films": {
+    "seeds": {
+      "title": "SEEDS",
+      "director": null,
+      "year": null,
+      "runtime": null,
+      "format": null,
+      "poster_url": null,
+      "detail_url": "https://filmforum.org/film/seeds"
+    },
+    "queen-kelly": {
+      "title": "Erich von Stroheim’s QUEEN KELLY",
+      "director": null,
+      "year": null,
+      "runtime": null,
+      "format": null,
+      "poster_url": null,
+      "detail_url": "https://filmforum.org/film/queen-kelly"
+    },
+    "sunset-blvd": {
+      "title": "Billy Wilder’s SUNSET BLVD.",
+      "director": null,
+      "year": null,
+      "runtime": null,
+      "format": null,
+      "poster_url": null,
+      "detail_url": "https://filmforum.org/film/sunset-blvd"
+    },
+    "father-mother-sister-brother": {
+      "title": "FATHER MOTHER SISTER BROTHER",
+      "director": null,
+      "year": null,
+      "runtime": null,
+      "format": null,
+      "poster_url": null,
+      "detail_url": "https://filmforum.org/film/father-mother-sister-brother"
+    },
+    "holding-liat": {
+      "title": "HOLDING LIAT",
+      "director": null,
+      "year": null,
+      "runtime": null,
+      "format": null,
+      "poster_url": null,
+      "detail_url": "https://filmforum.org/film/holding-liat"
+    },
+    "the-voice-of-hind-rajab": {
+      "title": "THE VOICE OF HIND RAJAB",
+      "director": null,
+      "year": null,
+      "runtime": null,
+      "format": null,
+      "poster_url": null,
+      "detail_url": "https://filmforum.org/film/the-voice-of-hind-rajab"
+    }
+  },
+  "screenings": [
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "12:15",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "2:45",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": "OC",
+      "tags": [
+        "OC"
+      ]
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "5:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "8:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "1:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "queen-kelly",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "6:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "queen-kelly",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "3:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "sunset-blvd",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "8:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "sunset-blvd",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "12:50",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": "OC",
+      "tags": [
+        "OC"
+      ]
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "3:10",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "5:30",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "7:50",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "12:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "4:25",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "6:30",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "2:25",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "the-voice-of-hind-rajab",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-19",
+      "time": "8:35",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "the-voice-of-hind-rajab",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "12:15",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "2:45",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "5:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "8:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": "OC",
+      "tags": [
+        "OC"
+      ]
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "1:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "queen-kelly",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "6:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "queen-kelly",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "3:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "sunset-blvd",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "8:30",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "sunset-blvd",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "12:50",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "3:10",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "5:30",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "7:50",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "12:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "4:25",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "6:30",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "2:25",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "the-voice-of-hind-rajab",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-20",
+      "time": "8:35",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "the-voice-of-hind-rajab",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "12:15",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "2:45",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "5:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "8:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "1:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "queen-kelly",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "6:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "queen-kelly",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "3:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "sunset-blvd",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "8:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "sunset-blvd",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "12:50",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "3:10",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "5:30",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "7:50",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": "OC",
+      "tags": [
+        "OC"
+      ]
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "12:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "4:25",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "6:30",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "2:25",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "the-voice-of-hind-rajab",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-21",
+      "time": "8:35",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "the-voice-of-hind-rajab",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "12:15",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "2:45",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "5:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "8:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "seeds",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "1:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "queen-kelly",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "6:00",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "queen-kelly",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "3:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "sunset-blvd",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "8:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "sunset-blvd",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "12:50",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "3:10",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "5:30",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "7:50",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "father-mother-sister-brother",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "12:20",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "4:25",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "6:30",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "holding-liat",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "2:25",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "the-voice-of-hind-rajab",
+      "notes": null
+    },
+    {
+      "theater_id": "filmforum",
+      "date": "2026-01-22",
+      "time": "9:10",
+      "status": "available",
+      "ticket_url": null,
+      "film_id": "the-voice-of-hind-rajab",
+      "notes": null
+    }
+  ]
 }
