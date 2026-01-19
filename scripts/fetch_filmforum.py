@@ -1,62 +1,176 @@
+#!/usr/bin/env python3
 import json
+import os
+import re
 import sys
-from datetime import datetime, timezone
-import requests
-from bs4 import BeautifulSoup
+from datetime import datetime, date
+from zoneinfo import ZoneInfo
 
-URL = "https://filmforum.org/now_playing"
+import requests
+from bs4 import BeautifulSoup, Comment
+
+SOURCE = "filmforum_nyc"
+THEATER = {"id": "filmforum", "name": "Film Forum", "city": "New York"}
+TZ = ZoneInfo("America/New_York")
+
+SOURCE_URL = os.environ.get("FILMFORUM_SOURCE_URL", "https://filmforum.org/now_playing")
+OUT_PATH = "docs/filmforum.json"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Safari/537.36"
+    "User-Agent": "Mozilla/5.0 (compatible; nyc-rep-showtimes/1.0; +https://github.com/chateau-angst/nyc-rep-showtimes)",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
 
-def fetch_filmforum():
-    try:
-        response = requests.get(URL, headers=HEADERS, timeout=20)
-        response.raise_for_status()
-    except Exception as e:
-        raise RuntimeError(f"Film Forum fetch failed: {e}")
+def now_iso_utc() -> str:
+    return datetime.now(tz=ZoneInfo("UTC")).isoformat()
 
-    soup = BeautifulSoup(response.text, "html.parser")
+def clean_title(text: str) -> str:
+    return re.sub(r"\s+", " ", text.strip())
 
-    films = []
+def slug_from_url(url: str) -> str:
+    m = re.search(r"/film/([^/?#]+)", url)
+    if m:
+        return m.group(1).strip()
+    return re.sub(r"[^a-z0-9]+", "-", url.lower()).strip("-")
 
-    # Each film lives inside a .now-playing-item
-    for item in soup.select(".now-playing-item"):
-        title_el = item.select_one("h3")
-        link_el = item.select_one("a")
+def extract_day_number_from_panel(panel) -> int | None:
+    comments = panel.find_all(string=lambda s: isinstance(s, Comment))
+    for c in comments:
+        m = re.search(r"\b(\d{1,2})\b", str(c))
+        if m:
+            return int(m.group(1))
+    return None
 
-        title = title_el.get_text(strip=True) if title_el else "Unknown title"
-        ticket_url = (
-            "https://filmforum.org" + link_el["href"]
-            if link_el and link_el.get("href")
-            else None
-        )
+def infer_week_dates(day_numbers: list[int], today_local: date) -> list[date]:
+    year = today_local.year
+    month = today_local.month
+    result = []
+    prev = None
+    for d in day_numbers:
+        if prev is not None and d < prev:
+            # month rollover
+            if month == 12:
+                month = 1
+                year += 1
+            else:
+                month += 1
+        result.append(date(year, month, d))
+        prev = d
+    return result
 
-        films.append({
-            "film_id": title.lower().replace(" ", "_"),
-            "title": title,
-            "ticket_url": ticket_url,
-            "showtimes": []  # we’ll fill this later
-        })
+def parse_time_and_tags(raw: str):
+    raw = raw.strip()
+    m = re.match(r"^(\d{1,2}:\d{2})(?:$begin:math:text$\(\[\^\)\]\+\)$end:math:text$)?$", raw)
+    if not m:
+        return None, [], raw
+    time_str = m.group(1)
+    tag = m.group(2)
+    tags = [tag] if tag else []
+    notes = tag if tag else None
+    return time_str, tags, notes
 
-    return {
-        "source": "filmforum_nyc",
-        "source_url": URL,
-        "fetched_at": datetime.now(timezone.utc).isoformat(),
-        "theater": {
-            "id": "filmforum",
-            "name": "Film Forum",
-            "city": "New York"
-        },
-        "films": films
+def main():
+    os.makedirs("docs", exist_ok=True)
+
+    print(f"[INFO] Fetching: {SOURCE_URL}")
+    resp = requests.get(SOURCE_URL, headers=HEADERS, timeout=60)
+    print(f"[INFO] HTTP status: {resp.status_code}")
+    resp.raise_for_status()
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+
+    module = soup.select_one("div.module.showtimes-table")
+    if not module:
+        raise RuntimeError("Could not find div.module.showtimes-table on the page.")
+
+    panels = module.select("div.showtimes-container > div[id^='tabs-']")
+    if not panels:
+        raise RuntimeError("Found showtimes-table but no tabs panels div#tabs-0..")
+
+    day_numbers = []
+    for p in panels:
+        dn = extract_day_number_from_panel(p)
+        if dn is None:
+            raise RuntimeError("A day panel is missing the <!-- DD --> comment.")
+        day_numbers.append(dn)
+
+    dates = infer_week_dates(day_numbers, datetime.now(tz=TZ).date())
+
+    films = {}        # <-- dictionary, not list
+    screenings = []
+
+    for panel, panel_date in zip(panels, dates):
+        for row in panel.find_all("p"):
+            strong = row.find("strong")
+            if not strong:
+                continue
+
+            a = strong.find("a")
+            if not a:
+                # "Showtimes coming soon!"
+                continue
+
+            detail_url = (a.get("href") or "").strip()
+            if not detail_url:
+                continue
+            if detail_url.startswith("/"):
+                detail_url = "https://filmforum.org" + detail_url
+
+            title = clean_title(a.get_text(" ", strip=True))
+            film_id = slug_from_url(detail_url)
+
+            spans = row.find_all("span")
+            if not spans:
+                continue
+
+            # Create film entry once
+            if film_id not in films:
+                films[film_id] = {
+                    "title": title,
+                    "director": None,
+                    "year": None,
+                    "runtime": None,
+                    "format": None,
+                    "poster_url": None,
+                    "detail_url": detail_url,
+                }
+
+            for sp in spans:
+                raw_time = sp.get_text(" ", strip=True)
+                t, tags, note = parse_time_and_tags(raw_time)
+                if not t:
+                    continue
+
+                screening = {
+                    "theater_id": THEATER["id"],
+                    "date": panel_date.isoformat(),
+                    "time": t,
+                    "status": "available",
+                    "ticket_url": None,
+                    "film_id": film_id,
+                    "notes": note,
+                }
+                if tags:
+                    screening["tags"] = tags
+
+                screenings.append(screening)
+
+    out = {
+        "source": SOURCE,
+        "source_url": SOURCE_URL,
+        "fetched_at": now_iso_utc(),
+        "theater": THEATER,
+        "films": films,
+        "screenings": screenings,
     }
 
+    with open(OUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=2)
+
+    print(f"[INFO] Parsed films={len(films)} screenings={len(screenings)}")
+    print(f"[INFO] Wrote {OUT_PATH}")
+
+    return 0
 
 if __name__ == "__main__":
-    try:
-        data = fetch_filmforum()
-        print(json.dumps(data, indent=2))
-    except Exception as e:
-        print(f"Error: {e}", file=sys.stderr)
-        sys.exit(1)
+    sys.exit(main())
