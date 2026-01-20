@@ -1,22 +1,22 @@
 {
   "source": "metrograph_nyc",
   "source_url": "https://metrograph.com/nyc/",
-  "fetched_at": "2026-01-19T20:38:38.969620+00:00",
+  "fetched_at": "2026-01-20T11:49:13.725756+00:00",
   "theater": {
     "id": "metrograph",
     "name": "Metrograph",
     "city": "New York"
   },
   "films": {
-    "9999004640": {
-      "film_id": "9999004640",
-      "title": "Casper",
-      "director": "Brad Silberling",
-      "year": 1995,
-      "runtime_min": 100,
-      "format": "4K DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/CASPER_1-copy.jpg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004640"
+    "9999000581": {
+      "film_id": "9999000581",
+      "title": "Paris, Texas",
+      "director": "Wim Wenders",
+      "year": 1984,
+      "runtime_min": 145,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/PARIS-TEXAS_9.jpeg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000581"
     },
     "9999000982": {
       "film_id": "9999000982",
@@ -27,6 +27,106 @@
       "format": "35mm",
       "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/MARY-POPPINS_2-copy.jpg",
       "detail_url": "https://metrograph.com/film/?vista_film_id=9999000982"
+    },
+    "9999004643": {
+      "film_id": "9999004643",
+      "title": "When the Phone Rang",
+      "director": "Iva Radivojević",
+      "year": 2024,
+      "runtime_min": 73,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/when-the-phone-rang.jpeg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004643"
+    },
+    "9999004644": {
+      "film_id": "9999004644",
+      "title": "They Say the Moon Is Fuller Here",
+      "director": "Clara Law",
+      "year": 1985,
+      "runtime_min": 78,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/THEY-SAY-THE-MOON-IS-FULLER_2.jpeg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004644"
+    },
+    "9999004645": {
+      "film_id": "9999004645",
+      "title": "Dreams of Dislocation: A Short Film Program",
+      "director": "Multiple Dirs",
+      "year": 2020,
+      "runtime_min": 81,
+      "format": "Digital",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/dreams-of-dislocation.jpeg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004645"
+    },
+    "9999000508": {
+      "film_id": "9999000508",
+      "title": "Farewell China",
+      "director": "Clara Law",
+      "year": 1990,
+      "runtime_min": 114,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/FAREWELL-CHINA_3-copy.jpg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000508"
+    },
+    "9999004646": {
+      "film_id": "9999004646",
+      "title": "Calendar",
+      "director": "Atom  Egoyan",
+      "year": 1993,
+      "runtime_min": 74,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/CALENDAR.jpg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004646"
+    },
+    "9999004440": {
+      "film_id": "9999004440",
+      "title": "Love & Pop",
+      "director": "Hideaki Anno",
+      "year": 1998,
+      "runtime_min": 110,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/07/LOVE-AND-POP_2.jpeg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004440"
+    },
+    "9999000243": {
+      "film_id": "9999000243",
+      "title": "Smithereens",
+      "director": "Susan Seidelman",
+      "year": 1982,
+      "runtime_min": 93,
+      "format": "DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/SMITHEREENS_1.jpeg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000243"
+    },
+    "9999000045": {
+      "film_id": "9999000045",
+      "title": "Eyes Wide Shut",
+      "director": "Stanley Kubrick",
+      "year": 1999,
+      "runtime_min": 159,
+      "format": "35mm",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/11/EYES-WIDE-SHUT_5.jpeg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000045"
+    },
+    "9999002313": {
+      "film_id": "9999002313",
+      "title": "Made in Hong Kong",
+      "director": "Fruit Chan",
+      "year": 1997,
+      "runtime_min": 108,
+      "format": "DCP",
+      "poster_url": "https://metrograph.imgix.net/2020/11/MadeinHK_3.jpg?fm=pjpg&ixlib=php-3.3.1",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999002313"
+    },
+    "9999004640": {
+      "film_id": "9999004640",
+      "title": "Casper",
+      "director": "Brad Silberling",
+      "year": 1995,
+      "runtime_min": 100,
+      "format": "4K DCP",
+      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/CASPER_1-copy.jpg",
+      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004640"
     },
     "9999002663": {
       "film_id": "9999002663",
@@ -58,16 +158,6 @@
       "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/ICE.jpg",
       "detail_url": "https://metrograph.com/film/?vista_film_id=9999004647"
     },
-    "9999004440": {
-      "film_id": "9999004440",
-      "title": "Love & Pop",
-      "director": "Hideaki Anno",
-      "year": 1998,
-      "runtime_min": 110,
-      "format": "DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/07/LOVE-AND-POP_2.jpeg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004440"
-    },
     "9999004190": {
       "film_id": "9999004190",
       "title": "Blue Velvet [35mm]",
@@ -77,26 +167,6 @@
       "format": "35mm",
       "poster_url": "https://metrograph.com/wp-content/uploads/2025/02/BLUE-VELVET_1_resized.jpg",
       "detail_url": "https://metrograph.com/film/?vista_film_id=9999004190"
-    },
-    "9999004644": {
-      "film_id": "9999004644",
-      "title": "They Say the Moon Is Fuller Here",
-      "director": "Clara Law",
-      "year": 1985,
-      "runtime_min": 78,
-      "format": "DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/THEY-SAY-THE-MOON-IS-FULLER_2.jpeg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004644"
-    },
-    "9999000581": {
-      "film_id": "9999000581",
-      "title": "Paris, Texas",
-      "director": "Wim Wenders",
-      "year": 1984,
-      "runtime_min": 145,
-      "format": "DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/PARIS-TEXAS_9.jpeg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000581"
     },
     "9999000040": {
       "film_id": "9999000040",
@@ -398,16 +468,6 @@
       "poster_url": "https://metrograph.com/wp-content/uploads/2026/01/ressources_2020-12-22_002791_2.jpg",
       "detail_url": "https://metrograph.com/film/?vista_film_id=9999004663"
     },
-    "9999000243": {
-      "film_id": "9999000243",
-      "title": "Smithereens",
-      "director": "Susan Seidelman",
-      "year": 1982,
-      "runtime_min": 93,
-      "format": "DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/SMITHEREENS_1.jpeg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000243"
-    },
     "9999004657": {
       "film_id": "9999004657",
       "title": "Cinderella",
@@ -447,46 +507,6 @@
       "format": "16mm",
       "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/UNDERGROUND.jpg",
       "detail_url": "https://metrograph.com/film/?vista_film_id=9999001408"
-    },
-    "9999000508": {
-      "film_id": "9999000508",
-      "title": "Farewell China",
-      "director": "Clara Law",
-      "year": 1990,
-      "runtime_min": 114,
-      "format": "DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/FAREWELL-CHINA_3-copy.jpg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000508"
-    },
-    "9999004646": {
-      "film_id": "9999004646",
-      "title": "Calendar",
-      "director": "Atom  Egoyan",
-      "year": 1993,
-      "runtime_min": 74,
-      "format": "DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2025/12/CALENDAR.jpg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999004646"
-    },
-    "9999000355": {
-      "film_id": "9999000355",
-      "title": "Blow-Up",
-      "director": "Michelangelo Antonioni",
-      "year": 1966,
-      "runtime_min": 111,
-      "format": "35mm",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2023/08/blow-up.jpg",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000355"
-    },
-    "9999000604": {
-      "film_id": "9999000604",
-      "title": "The Squid and the Whale",
-      "director": "Noah  Baumbach",
-      "year": 2005,
-      "runtime_min": 81,
-      "format": "4K DCP",
-      "poster_url": "https://metrograph.com/wp-content/uploads/2026/01/THE-SQUID-AND-THE-WHALE_1.webp",
-      "detail_url": "https://metrograph.com/film/?vista_film_id=9999000604"
     },
     "9999001804": {
       "film_id": "9999001804",
@@ -902,6 +922,105 @@
   "screenings": [
     {
       "theater_id": "metrograph",
+      "date": "2026-01-17",
+      "time": "12:00pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999000581",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-17",
+      "time": "12:15pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999000982",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-17",
+      "time": "2:50pm",
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28857",
+      "film_id": "9999004643",
+      "notes": "Q&A with director Iva Radivojević on Saturday, January 17th"
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-17",
+      "time": "3:00pm",
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28866",
+      "film_id": "9999004644",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-17",
+      "time": "4:45pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999004645",
+      "notes": "Post-screening discussion with filmmakers Iva Radivojević and Xiaolu Wang on Saturday, January 17th"
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-17",
+      "time": "5:00pm",
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28860",
+      "film_id": "9999000508",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-17",
+      "time": "7:00pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999004646",
+      "notes": "Introduction by filmmaker Iva Radivojević on Saturday, January 17th"
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-17",
+      "time": "7:20pm",
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28861",
+      "film_id": "9999004440",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-17",
+      "time": "8:35pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999000243",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-17",
+      "time": "9:40pm",
+      "status": "sold_out",
+      "ticket_url": null,
+      "film_id": "9999000045",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
+      "date": "2026-01-17",
+      "time": "10:30pm",
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28863",
+      "film_id": "9999002313",
+      "notes": null
+    },
+    {
+      "theater_id": "metrograph",
       "date": "2026-01-18",
       "time": "11:00am",
       "status": "available",
@@ -1075,8 +1194,8 @@
       "theater_id": "metrograph",
       "date": "2026-01-20",
       "time": "4:45pm",
-      "status": "sold_out",
-      "ticket_url": null,
+      "status": "available",
+      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29038",
       "film_id": "9999004647",
       "notes": null
     },
@@ -1444,213 +1563,6 @@
       "status": "available",
       "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=28934",
       "film_id": "9999004656",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-26",
-      "time": "4:00pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29048",
-      "film_id": "9999000581",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-26",
-      "time": "4:15pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29051",
-      "film_id": "9999002965",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-26",
-      "time": "7:00pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29049",
-      "film_id": "9999004654",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-26",
-      "time": "7:25pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29052",
-      "film_id": "9999004659",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-26",
-      "time": "9:20pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29050",
-      "film_id": "9999004656",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-26",
-      "time": "9:35pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29053",
-      "film_id": "9999003864",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-27",
-      "time": "4:30pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29057",
-      "film_id": "9999004662",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-27",
-      "time": "6:30pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29058",
-      "film_id": "9999004558",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-27",
-      "time": "7:10pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29055",
-      "film_id": "9999000508",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-27",
-      "time": "8:10pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29059",
-      "film_id": "9999004646",
-      "notes": "Introduction by filmmaker Iva Radivojević on Saturday, January 17th"
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-27",
-      "time": "9:30pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29056",
-      "film_id": "9999004654",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-27",
-      "time": "9:45pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29060",
-      "film_id": "9999000243",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-28",
-      "time": "4:15pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29061",
-      "film_id": "9999000355",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-28",
-      "time": "4:30pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29064",
-      "film_id": "9999004664",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-28",
-      "time": "6:30pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29062",
-      "film_id": "9999004653",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-28",
-      "time": "6:50pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29065",
-      "film_id": "9999004654",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-28",
-      "time": "9:10pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29066",
-      "film_id": "9999004440",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-28",
-      "time": "9:20pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29063",
-      "film_id": "9999001649",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-29",
-      "time": "4:45pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29072",
-      "film_id": "9999000604",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-29",
-      "time": "4:50pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29069",
-      "film_id": "9999001408",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-29",
-      "time": "6:30pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29067",
-      "film_id": "9999000586",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-29",
-      "time": "6:40pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29070",
-      "film_id": "9999001858",
-      "notes": null
-    },
-    {
-      "theater_id": "metrograph",
-      "date": "2026-01-29",
-      "time": "9:10pm",
-      "status": "available",
-      "ticket_url": "https://t.metrograph.com/Ticketing/visSelectTickets.aspx?cinemacode=9999&txtSessionId=29071",
-      "film_id": "9999004654",
       "notes": null
     },
     {
